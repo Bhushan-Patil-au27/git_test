@@ -1,0 +1,249 @@
+﻿Q1. List out different OOPS principles and explain? 
+
+
+Ans:   There are four principles of oops which are as follows ,
+
+
+        1 Abstraction
+        2 Encapsulation
+        3 Polymorphism
+        4 Inheritance
+
+
+1 Abstraction : Data abstraction is a providing the essential data and hiding other details to the outside world
+Data abstraction is a programming (and design) technique that relies on the separation of interface and implementation.
+
+
+2 Encapsulation :  Wrapping the data along with method performed on that data in a single unite is known as encapsulation 
+Encapsulation may also refer to a mechanism of restricting the direct access to some components of an object, such that users cannot access state values for all of the variables of a particular object. Encapsulation can be used to hide both data members and data functions or methods associated with an instantiated class or object.
+
+
+3 Polymorphism: The word polymorphism means having many forms. In simple words, we can define polymorphism as the ability of a message to be displayed in more than one form. 
+A person at the same time can have different characteristics. Like a man at the same time is a father, a husband, an employee. So the same person possesses different behavior in different situations. This is called polymorphism. 
+
+
+4 Inheritance :Inheritance is the procedure in which one class inherits the attributes and methods of another class. The class whose properties and methods are inherited is known as the Parent class. And the class that inherits the properties from the parent class is the Child class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q2. List out Layers of TCP/IP Model and explain? 
+
+
+Ans: There are mainly four layers in TCP/IP model are as follows:
+
+
+1 Network Access Layer
+2 Internet Layer
+3 Transport Layer
+4 Application Layer
+
+
+
+
+Network Access Layer:
+            A network layer is the lowest layer of the TCP/IP model.A network layer is the combination of the Physical layer and Data Link layer defined in the OSI reference model.It defines how the data should be sent physically through the network.This layer is mainly responsible for the transmission of the data between two devices on the same network.
+
+
+Internet Layer:
+An internet layer is the second layer of the TCP/IP model.An internet layer is also known as the network layer.The main responsibility of the internet layer is to send the packets from any network, and they arrive at the destination irrespective of the route they take.
+
+
+Transport Layer:
+The transport layer is responsible for the reliability, flow control, and correction of data which is being sent over the network.The two protocols used in the transport layer are User Datagram protocol and Transmission control protocol.
+
+
+Application Layer:
+                An application layer is the topmost layer in the TCP/IP model.It is responsible for handling high-level protocols, issues of representation.This layer allows the user to interact with the application.When one application layer protocol wants to communicate with another application layer, it forwards its data to the transport layer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q3. Construct a binary tree by using postorder and inorder sequences given below. Inorder: N, M, P, O, Q Postorder: N, P, Q, O, M 
+
+
+Ans:
+        Algorithm Inorder(tree) [ left,root,right]
+
+
+   1. Traverse the left subtree, i.e., call Inorder(left-subtree)
+   2. Visit the root.
+   3. Traverse the right subtree, i.e., call Inorder(right-subtree)
+
+
+Class node:
+        def __init__(self,x)
+                Self.data = root
+                self.left = none
+                self .right  = none
+
+
+def  inorder(root):
+        
+        If root ==none:
+                return 
+
+
+        inorder(left.data)
+        print(root.data)
+        inorder(right.data)
+
+
+Root.data = node(N)
+Root.left = node(M)
+Root.right =node(P)
+Root.left.left = node(O)
+Root.right.right =node(Q)
+
+
+                                                                                                                Algorithm Postorder(tree) [root,left.right]
+
+
+   1. Traverse the left subtree, i.e., call Postorder(left-subtree)
+   2. Traverse the right subtree, i.e., call Postorder(right-subtree)
+   3. Visit the root.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def  postorder(root):
+        
+        If root ==none:
+                return 
+
+
+        print(root.data)
+postorder(left.data)
+postorder(right.data)
+
+
+
+
+Root.data = node(N)
+Root.left = node(P)
+Root.right =node(Q)
+Root.left.left = node(O)
+Root.right.right =node(M)
+
+
+Q5. Explain LRU cache and its implementation by taking some examples and explaining all steps. 
+
+
+Ans: The LRU caching scheme is to remove the least recently used frame when the cache is full and a new page is referenced which is not there in cache. 
+
+
+        The LRU algorithm is pretty easy! If the key is present in HashMap, it's a cache hit; else, it's a cache miss.
+We'll follow two steps after a cache miss occurs:
+1. Add a new element in front of the list.
+2. Add a new entry in HashMap and refer to the head of the list.
+And, we'll do two steps after a cache hit:
+1. Remove the hit element and add it in front of the list.
+2. Update HashMap with a new reference to the front of the list.
+Now, it's time to see how we can implement LRU cache in Java!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q6. Explain virtual memory.
+Ans:
+Virtual memory is a common technique used in a computer's operating system (OS). Virtual memory uses both hardware and software to enable a computer to compensate for physical memory shortages, temporarily transferring data from random access memory (RAM) to disk storage.
+The size of virtual storage is limited by the addressing scheme of the computer system and the amount of secondary memory is available not by the actual number of the main storage locations. 
+
+
+
+
+Q7. Explain Deadlock and its characteristics. 
+Ans:
+Deadlock is a situation where a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process. 
+Consider an example when two trains are coming toward each other on the same track and there is only one track, none of the trains can move once they are in front of each other. A similar situation occurs in operating systems when there are two or more processes that hold some resources and wait for resources held by other(s). 
+
+
+Mutual Exclusion: Two or more resources are non-shareable (Only one process can use at a time) 
+Hold and Wait: A process is holding at least one resource and waiting for resources. 
+No Preemption: A resource cannot be taken from a process unless the process releases the resource. 
+Circular Wait: A set of processes are waiting for each other in circular form. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q8. Explain NAT and ARP protocol? 
+Ans
+Network Address Translation (NAT) is a process in which one or more local IP address is translated into one or more Global IP address and vice versa in order to provide Internet access to the local hosts
+
+
+Generally, the border router is configured for NAT i.e the router which has one interface in the local (inside) network and one interface in the global (outside) network. When a packet traverses outside the local (inside) network, NAT converts that local (private) IP address to a global (public) IP address. When a packet enters the local network, the global (public) IP address is converted to a local (private) IP address. 
+
+
+ARP
+        The Address Resolution Protocol(ARP) is a communication protocol used to discover the data-link layer address(Layer 2 address like Media Access Control(MAC) address) associated with an Internet layer address(Layer 3 address like IPv4 address). ARP was defined in 1982 by RFC 826.
+ARP is a request-response or request-reply protocol in which one device sends a request to another device asking for some information, to which the other device will reply with the required information. It is a message exchange pattern. ARP packets are encapsulated by link layer and are distributed only in a particular network. As a result, ARP is said to be a link layer protocol.
